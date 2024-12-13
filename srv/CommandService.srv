@@ -1,0 +1,10 @@
+string command
+uint8[16] data_write
+---
+uint8[16] data_read  # data read from the selected tag
+uint8[12] epc_read  # EPC of the selected tag after read operation
+bool response  # Response of the operation True = Success False = Fail
+uint8[12] epc_write  # EPC of the selected tag after write operation
+uint8[12] single_poll_epc  # default EPC of one of the detected tags after a single poll operation
+uint8[60] multi_poll_epc  # default EPC of the detected tags after a multi poll operation
+int64 multi_epc_size # size of the EPC data array after a multi poll operation
